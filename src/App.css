@@ -3,28 +3,20 @@
   --cyan-blue: #B3CDE0;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main-header {
+.navbar {
   display: flex;
   justify-content: space-between;
-  padding: .5em 2em;
+  padding: 1em 1.5em;
   background-color: var(--blue);
   top: 0;
-  left: 0;
-  width: 100%;
 }
 
-.links {
+.nav-links {
   display: flex;
   list-style: none;
 }
 
-.links a {
+.nav-links a {
   margin: 0 1rem;
   text-decoration: none;
   color: var(--cyan-blue);
@@ -33,7 +25,7 @@
   padding: .2rem;
 }
 
-.links a:hover{
+.nav-links a:hover{
   color: #fff;
   transition: 1s;
   animation: borderRunning 1s infinite linear 1s;

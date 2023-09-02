@@ -1,6 +1,7 @@
 import './App.css';
-import Header from './components/header.jsx';
+import Header from './components/Header.jsx';
 import { useClimate } from './hooks/climate';
+import Main from './components/Main.jsx';
 
 function App() {
   useClimate('Vitória');
@@ -9,10 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
-      <input placeholder='Digite sua cidade aqui!'></input>
-      <button>Buscar</button>
-      <p>Hello</p>
+      <Header />
+      <Main />
     </div>
   );
 }

@@ -27,7 +27,7 @@ function Bloc() {
 
 export default function Main() {
     return (
-        <div>
+        <div className="main">
             <Search />
             <Bloc />
         </div>

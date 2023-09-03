@@ -1,19 +1,28 @@
 export default function Bloc({ data }) {
+    const { location, current } = data;
     let iconSize = 50; //Tamanho do ícone.
 
     return (
         <div>
-            <h2>{`${data.location.name} - ${data.location.region}, ${data.location.country}`}</h2>
-            <h4>{`Atualizado: ${data.current.last_updated}`}</h4>
-            <p className="blocDescription">Descrição: {data.current.condition.text}</p>
-            <div style={{ display: "flex", alignItems: "center" }}>
-                <p className="temperature">{`Celsius: ${data.current.temp_c}`} <br /> {`Fahrenheit: ${data.current.temp_f}`}</p>
-                <img
-                    className="icon"
-                    src={data.current.condition.icon}
-                    alt={'icon'}
-                    style={{ width: iconSize, height: iconSize }}
-                />
+            <h2>{`${location.name} - ${location.region}, ${location.country}`}</h2>
+            <div>
+                <div>
+                    <h3>{`Atualizado: ${current.last_updated}`}</h3>
+                    <p className="blocDescription">Clima: {current.condition.text}</p>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                        <p className="temperature">{`Celsius: ${current.temp_c}`} <br />
+                            {`Fahrenheit: ${current.temp_f}`}</p>
+                        <img
+                            className="icon"
+                            src={current.condition.icon}
+                            alt={'icon'}
+                            style={{ width: iconSize, height: iconSize }}
+                        />
+                    </div>
+                </div>
+                <div>
+                    <h4>{`Vento: ${current.wind_kph}km`}</h4>
+                </div>
             </div>
         </div>
     );

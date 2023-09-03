@@ -1,18 +1,14 @@
 import cloud from "../img/cloud.png";
 import sun from "../img/sun.png";
-
-let cities = [
-    {id: 1, name: 'Belo Horizonte', temperature: 17, raining: true, description: "Leves pancadas de chuva na zona urbana."},
-    {id: 2, name: 'São Paulo', temperature: 30, raining: false, description: "Muito sol durante o dia."},
-    {id: 3, name: 'Vitória', temperature: 22, raining: true, description: "Chuvas no período da tarde."}
-]; //Exemplos
+import Search from "./Search";
+import cities from "../citiesExample";
 
 function Bloc() {
     let iconSize = 30; //Ajuste de tamanho do ícone
 
     //Ao usar uma arrow function dentro do método map, não deve-se colocar parênteses após a seta.
     const listCities = cities.map(city => 
-        <li key={city.id}> {/*Identificador do item na lista.*/}
+        <li className="cities-item" key={city.id}> {/*Identificador do item na lista.*/}
             <h2>{city.name}</h2> {/*Nome da cidade.*/}
             <p className="blocDescription">{city.description}</p>
             <div style={{display: "flex"}}>
@@ -25,16 +21,7 @@ function Bloc() {
         </li>
     );
     return(
-        <ul>{listCities}</ul>
-    );
-}
-
-function Search() {
-    return(
-        <div>
-            <input placeholder='Digite sua cidade aqui!'></input>
-            <button>Buscar</button>
-        </div>
+        <ul style={{display: "flex", listStyle: "none"}}>{listCities}</ul>
     );
 }
 

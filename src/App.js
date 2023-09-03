@@ -4,10 +4,6 @@ import { useClimate } from './hooks/climate';
 import Main from './components/Main.jsx';
 
 function App() {
-  useClimate('Vitória');
-  function searchCity() {
-  }
-
   return (
     <div className="App">
       <Header />

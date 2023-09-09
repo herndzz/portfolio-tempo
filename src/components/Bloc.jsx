@@ -21,7 +21,9 @@ export default function Bloc({ data }) {
                     </div>
                 </div>
                 <div>
-                    <h4>{`Vento: ${current.wind_kph}km`}</h4>
+                    <h4>{`Umidade: ${current.humidity}%`}</h4>
+                    <h4>{`Velocidade do vento: ${current.wind_kph}km/h`}</h4>
+                    <h4>{`Direção do vento: ${current.wind_dir}`}</h4>
                 </div>
             </div>
         </div>

@@ -7,11 +7,13 @@ export default function Header() {
     return (
         <div>
             <div className="navbar">
-                <img className="logo" src={logoClima} alt="logo" style={{width: logoSize, height: logoSize}}/> 
-                <ul className="nav-links">
-                    <li><a href="#">Previsão do Tempo</a></li>
-                    <li><a href="#">Clima</a></li>
-                </ul>
+                <div style={{display: "flex", alignItems: "center"}}>
+                    <a href="#">
+                        <img className="logo" src={logoClima} alt="logo"
+                        style={{ width: logoSize, height: logoSize }} />
+                    </a>
+                    <h2 style={{color: "#fff"}}>Clima & Tempo</h2>
+                </div>
             </div>
         </div>
     );
